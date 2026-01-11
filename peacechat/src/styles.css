@@ -341,16 +341,12 @@
   @apply border-brand-500 bg-brand-500;
 }
 
-.p-overlay-content {
-  @apply fixed!;
-}
-
 .p-ripple.p-select-option {
   @apply text-gray-500!;
 }
 
 .row-selector .p-component {
-  @apply bg-white! border-[#52525b38]! w-18.75!;
+  @apply bg-white! border-[#52525b38]!;
 }
 
 .p-paginator,.p-select {

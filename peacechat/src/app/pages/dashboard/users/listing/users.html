@@ -1,14 +1,21 @@
-<main>
+<main class="main">
   <div class="space-y-5 sm:space-y-6">
     <div class="rounded-2xl border border-gray-200 bg-white">
-      <div class="px-5 py-4 sm:px-6 sm:py-5">
+      <div class="px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-3">
         <h3 class="text-base font-medium text-gray-800">
           Users (1550)
         </h3>
+        <div class="border-gray-500 flex items-center gap-2 border rounded-xl px-3 py-2 w-75 hover:shadow-md focus:shadow-md">
+          <svg fill="#000000" width="15px" height="15px" viewBox="0 0 0.45 0.45" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.407 0.38 0.337 0.311A0.169 0.169 0 1 0 0.311 0.337l0.069 0.069a0.019 0.019 0 0 0 0.027 0 0.019 0.019 0 0 0 0 -0.026M0.206 0.337a0.131 0.131 0 1 1 0.131 -0.131 0.131 0.131 0 0 1 -0.131 0.131" />
+          </svg>
+          <input type="text" class="outline-0 text-black w-full" />
+        </div>
       </div>
       <div class="p-5 border-t border-gray-100 sm:p-6">
         <div class="overflow-hidden rounded-xl border border-gray-200 bg-white">
-          <div class="max-w-full overflow-x-auto custom-scrollbar">
+          <div class="max-w-full overflow-x-auto custom-scrollbar h-[50dvh]">
             <table class="min-w-full">
               <thead>
                 <tr class="border-b border-gray-100">
@@ -59,7 +66,7 @@
               <tbody class="divide-y divide-gray-100">
                 <tr>
                   <td class="px-5 py-4 sm:px-6">
-                    <div class="flex items-center">
+                    <a href="#" class="flex items-center">
                       <div class="flex items-center gap-3">
                         <div class="w-10 h-10 overflow-hidden rounded-full">
                           <img src="/images/user/user.jpg" alt="brand" />
@@ -70,7 +77,7 @@
                           </span>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </td>
                   <td class="px-5 py-4 sm:px-6">
                     <div class="flex items-center">
@@ -129,7 +136,8 @@
           <div class="border border-t rounded-b-xl border-gray-100 py-4 pl-4.5 pr-4">
             <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between">
               <div class="pb-3 xl:pb-0 flex items-center gap-3 row-selector">
-                <p class="pb-3 text-sm font-medium text-center text-gray-500 border-b border-gray-100 xl:border-b-0 xl:pb-0 xl:text-left">
+                <p
+                  class="pb-3 text-sm font-medium text-center text-gray-500 border-b border-gray-100 xl:border-b-0 xl:pb-0 xl:text-left">
                   Show per page
                 </p>
                 <p-select [options]="options" optionLabel="label" optionValue="value" [(ngModel)]="rows"
