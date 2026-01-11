@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     title: 'Sign In - PeaceChat',
-    loadComponent: () => import('./signin/signin').then(m => m.Signin)
+    loadComponent: () => import('./pages/auth/signin/signin').then(m => m.Signin)
   },
   {
     path: 'dashboard',
@@ -13,8 +13,22 @@ export const routes: Routes = [
     children: [
       {
         path: 'users',
-        title: 'Users - PeaceChat',
-        loadComponent: () => import('./dashboard/home/home').then(m => m.Home)
+        children: [
+          {
+            path: '',
+            title: 'Users - PeaceChat',
+            loadComponent: () => import('./pages/dashboard/users/listing/users').then(m => m.Users)
+          },
+          {
+            path: ':id',
+            title: 'User Details - PeaceChat',
+            loadComponent: () => import('./pages/dashboard/users/details/details').then(m => m.Details)
+          }
+        ]
+      },
+      {
+        path: '**',
+        redirectTo: 'users'
       }
     ]
   },
