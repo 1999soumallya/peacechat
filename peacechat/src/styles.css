@@ -364,3 +364,28 @@
 .p-paginator-page.p-paginator-page-selected,.p-select-option.p-select-option-selected {
   @apply bg-brand-500! border-brand-500! text-white!
 }
+
+.pagination-custom .p-paginator {
+  @apply flex items-center gap-2;
+}
+
+.pagination-custom .p-paginator-pages .p-paginator-page {
+  @apply w-8 h-8 flex items-center justify-center rounded-full text-sm text-gray-600 hover:bg-gray-100;
+}
+
+.pagination-custom .p-paginator-pages .p-highlight {
+  @apply bg-[#3b5bff] text-white;
+}
+
+.pagination-custom .p-paginator-first,
+.pagination-custom .p-paginator-prev,
+.pagination-custom .p-paginator-next,
+.pagination-custom .p-paginator-last {
+  @apply text-gray-600 hover:text-gray-800;
+}
+
+.p-paginator {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 1 !important;
+}

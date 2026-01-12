@@ -27,6 +27,16 @@ export const routes: Routes = [
         ]
       },
       {
+        path: 'listeners',
+        children: [
+          {
+            path: '',
+            title: 'Listeners - PeaceChat',
+            loadComponent: () => import('./pages/dashboard/listeners/listeners').then(m => m.Listeners)
+          }
+        ]
+      },
+      {
         path: '**',
         redirectTo: 'users'
       }
