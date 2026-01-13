@@ -47,6 +47,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/dashboard/chat-calls/chatCalls').then(m => m.ChatCalls)
       },
       {
+        path: 'kyc',
+        title: 'Kyc - PeaceChat',
+        loadComponent: () => import('./pages/dashboard/kyc/kyc').then(m => m.Kyc)
+      },
+      {
         path: '**',
         redirectTo: 'users'
       }
